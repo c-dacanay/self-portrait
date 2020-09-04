@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
+    <!-- <script type="text/javascript">
+      var vary = "variable"; // functional scope
+
+      let othervary = "here"; //block scope
+
+      for (let i = 0; i < 100; i++) {
+        console.log(i);
+      }
+
+      //property is a variable attached to an object
+      let christina = {
+        name = null;
+      };
+      christina.name = "Christina";
+
+      //method is a function attached to an object
+
+      let thebutton = document.getElementById("thebutton");
+      thebutton.addEventListener('click', function() {
+        thebutton.value = "Ouch, that hurt"
+      });
+    </script> -->
+
+    <title>Live Web: Self-Portrait</title>
+  </head>
+
+  <body>
+    <div id="main-column">
+      <div class="frame hide">ey</div>
+      <!-- <video class="frame" id="main" src="assets/bump.mp4" controls/>this is some content</div> -->
+      <div class="frame" id="main">
+        <video class="videoInsert">
+          <source
+            src="http://www.w3schools.com/html/movie.mp4"
+            type="video/mp4"
+          />
+          <source src="movie.ogg" type="video/ogg" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="frame hide">ohhhhhh</div>
+    </div>
+
+    <div id="side-column">
+      hi hello<br />
+      how are u
+    </div>
+  </body>
+</html>
