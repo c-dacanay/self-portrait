@@ -5,19 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-
-    <script type="text/javascript"></script>
+    <script src="main.js"></script>
     <title>Live Web: Self-Portrait</title>
 
-    <script>
-      let vid = 0;
-
-      function videoPlay() {
-        //ACQUIRE VIDEO
+    <script type="text/javascript">
+      function init() {
+        let headphone = document.getElementById("headphone");
+        let control = document.getElementById("control");
+        let book = document.getElementById("book");
+        let pen = document.getElementById("pen");
         let content = document.getElementById("videoInsert");
-        console.log("here");
-        content.src = "http://www.w3schools.com/html/movie.mp4";
+        let tv = document.getElementById("main");
+
+        aboutPage();
+        console.log(content);
+        headphone.addEventListener("click", () => {});
+
+        control.addEventListener("click", () => {
+          console.log("click!");
+          resetVid();
+          videoPlay("http://www.w3schools.com/html/movie.mp4");
+        });
+
+        book.addEventListener("click", () => {
+          console.log("click!");
+        });
+
+        pen.addEventListener("click", () => {
+          console.log("click!");
+          aboutPage();
+        });
+
+        function resetVid() {
+          tv.innerHTML = `        
+            <video id="videoInsert" autoplay loop>
+          <source src="" type="video/mp4" />
+          <source src="" type="video/ogg" />
+          Your browser does not support the video tag.
+        </video>`;
+        }
+
+        function videoPlay(source) {
+          content = document.getElementById("videoInsert");
+          content.src = source;
+        }
+
+        function aboutPage() {
+          tv.innerHTML = `<div id="about"><h1>live web assignment 1 <br>self-portrait</h1><br>
+          <p>this is a website by <B>christina dacanay</b><br><br>
+            she's a illustrator, ux/ui designer, and burgeoning web developer.<br><br>
+            find more about this project on her blog and github.<br><br>
+            click on the frame for more specific presences.</div>`;
+        }
       }
+
+      window.addEventListener("load", init);
     </script>
   </head>
 
@@ -32,7 +74,7 @@
       <div class="frame" id="main">
         <video id="videoInsert" autoplay loop>
           <source src="" type="video/mp4" />
-          <!-- <source src="movie.ogg" type="video/ogg" /> -->
+          <source src="" type="video/ogg" />
           Your browser does not support the video tag.
         </video>
       </div>
@@ -44,9 +86,20 @@
       </div>
     </div>
 
+    <!-- BOTTOM -->
     <div id="side-column">
-      <button onclick="videoPlay()">hi</button><br />
-      how are u
+      <div class="frame">
+        <img class="displayed" id="headphone" src="assets/headphone.svg" />
+      </div>
+      <div class="frame">
+        <img class="displayed" id="control" src="assets/control.svg" />
+      </div>
+      <div class="frame">
+        <img class="displayed" id="book" src="assets/book.svg" />
+      </div>
+      <div class="frame">
+        <img class="displayed" id="pen" src="assets/pen.svg" />
+      </div>
     </div>
   </body>
 </html>
