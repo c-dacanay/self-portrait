@@ -6,18 +6,24 @@ function init() {
   let content = document.getElementById("videoInsert");
   let tv = document.getElementById("main");
 
-  aboutPage();
-  console.log(content);
-  headphone.addEventListener("click", () => { });
+  // playlist();
+
+
+  //BUTTON CONTROLS
+  headphone.addEventListener("click", () => {
+    resetVid();
+    videoPlay("assets/cow.mp4");
+  });
 
   control.addEventListener("click", () => {
     console.log("click!");
     resetVid();
-    videoPlay("http://www.w3schools.com/html/movie.mp4");
+    videoPlay("assets/loz.mp4");
   });
 
   book.addEventListener("click", () => {
     console.log("click!");
+    playlist();
   });
 
   pen.addEventListener("click", () => {
@@ -25,6 +31,7 @@ function init() {
     aboutPage();
   });
 
+  //FUNCTIONS
   function resetVid() {
     tv.innerHTML = `        
       <video id="videoInsert" autoplay loop>
@@ -37,6 +44,13 @@ function init() {
   function videoPlay(source) {
     content = document.getElementById("videoInsert");
     content.src = source;
+  }
+
+  function playlist() {
+    console.log('running')
+    tv.innerHTML = `
+    <iframe id="readSongs" src="https://open.spotify.com/embed/playlist/1K6xf3GSvaC9X7knn3HO1z" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
+
   }
 
   function aboutPage() {
