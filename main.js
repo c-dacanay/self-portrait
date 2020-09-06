@@ -8,6 +8,7 @@ function init() {
   let frame = document.getElementById("frame-img");
   let tag = null;
 
+  // aboutPage();
   //BUTTON CONTROLS
   headphone.addEventListener("click", () => {
     resetVid();
@@ -71,18 +72,23 @@ function init() {
   }
 
   function playlist() {
-    console.log('running')
     tv.innerHTML = `
-    <iframe id="readSongs" src="https://open.spotify.com/embed/playlist/1K6xf3GSvaC9X7knn3HO1z" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
+    <iframe id="readSongs" src="https://open.spotify.com/embed/playlist/1K6xf3GSvaC9X7knn3HO1z" 
+    frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
 
   }
 
   function aboutPage() {
-    tv.innerHTML = `<div id="about"><h1>live web assignment 1 <br>self-portrait</h1><br>
-    <p>this is a website by <B>christina dacanay</b><br><br>
-      she's a illustrator, ux/ui designer, and web developer.<br><br>
-      find more about this project on her blog and github.<br><br>
-      click on the frame for more specific presences.</div>`;
+    tv.innerHTML = `<div id="about">
+    <p>This is a small website hand coded and illustrated by Christina Dacanay. It is an "interactive self portrait" for <a href="https://itp.nyu.edu/~sve204/liveweb_fall2020/">Live Web</a> at ITP, NYU.</b><br><br>
+      Read more about this project on her <a href="http://www.cdacanay.com/itp-blog">blog</a> and <a href="https://github.com/c-dacanay/self-portrait">Github</a>.<br><br>
+      CREDIT:<br>
+      The animation of a girl with headphones is by <a href="http://jpmachado.art/">Juan Pablo Machado</a> popularized by ChilledCow's <a href="https://www.youtube.com/watch?v=5qap5aO4i9A">Youtube stream</a>. 
+      The music playing underneath her is a clip of Nujabes' song <a href="https://www.youtube.com/watch?v=eRcBMM-syVc">Reflections Eternal</a>.<br><br>
+      The videogame clip of from Legend of Zelda: Breath of the Wild. The music underneath is my favorite song from the OST, <a href="https://www.youtube.com/watch?v=SqhZbK6RI8g">Tarrey Town</a>.<br><br>
+      This website is set in Courier. All illustrations were done by me, in Figma.
+      
+      While this does look like my media console, in reality I don't watch much TV.<br><br></p></div>`;
   }
 }
 

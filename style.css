@@ -9,8 +9,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Inconsolata", monospace;
-  font-size: 2rem;
+  font-family: "Courier", monospace;
 }
 
 .frame {
@@ -62,10 +61,22 @@ body {
   width: 100%;
   height: 60%;
   padding-top: 4rem;
-  font-size: 21px;
+  /* font-size: 15px; */
   box-sizing: border-box;
   display: inline-flex;
   flex-flow: row wrap;
+}
+
+p {
+  font-size: 14;
+}
+
+a {
+  color: #aeeee1;
+}
+
+#about {
+  width: 55%;
 }
 
 #readSongs {
