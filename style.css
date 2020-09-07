@@ -93,6 +93,11 @@ a {
   /* padding-top: 9rem; */
 }
 
+#gamer {
+  min-width: 100%;
+  overflow: hidden;
+}
+
 #frame-img {
   /* padding: 5rem; */
   padding-top: 15%;

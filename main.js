@@ -48,7 +48,7 @@ function init() {
       if (tag == 1) {
         window.open("https://open.spotify.com/user/1216455498?si=dJzREaqrTiy0m2lyXEpoHQ", "_blank");
       } else if (tag == 2) {
-        console.log('vidogames');
+        gamer();
       } else if (tag == 3) {
         window.open("https://www.goodreads.com/user/show/10366015-christina", "_blank");
       } else {
@@ -76,6 +76,10 @@ function init() {
     <iframe id="readSongs" src="https://open.spotify.com/embed/playlist/1K6xf3GSvaC9X7knn3HO1z" 
     frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>`
 
+  }
+
+  function gamer() {
+    tv.innerHTML = `<div id="gamer"><img id="gamer" src="assets/gamer.png"></div>`
   }
 
   function aboutPage() {
